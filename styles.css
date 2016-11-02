@@ -1,0 +1,201 @@
+body{
+  background-image: url('/images/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+h1{
+  font-family: 'Indie Flower', cursive;
+  font-size: 100px;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  text-align: center;
+}
+.purpleflower{
+  margin-left: 5vw;
+  height: 35vh;
+  position: fixed;
+  bottom: -50px;
+  -moz-animation: 3s ease 0s normal none infinite swing;
+    -moz-transform-origin: center bottom;
+    -webkit-animation:swing 3s infinite ease-in-out;
+    -webkit-transform-origin:bottom;
+}
+.blueflower{
+  margin-left: 23vw;
+  height: 35vh;
+  position: fixed;
+  bottom: -50px;
+  -moz-animation: 3s ease 0s normal none infinite swing;
+    -moz-transform-origin: center bottom;
+    -webkit-animation: swing 3s infinite ease-in-out;
+    -webkit-transform-origin:bottom;
+}
+.redflower{
+  margin-left: 42vw;
+  height: 35vh;
+  position: fixed;
+  bottom: -50px;
+  -moz-animation: 3s ease 0s normal none infinite swing;
+    -moz-transform-origin: center bottom;
+    -webkit-animation:swing 3s infinite ease-in-out;
+    -webkit-transform-origin:bottom;
+}
+.sunflower{
+  margin-left: 60vw;
+  height: 35vh;
+  position: fixed;
+  bottom: -50px;
+  -moz-animation: 3s ease 0s normal none infinite swing;
+    -moz-transform-origin: center bottom;
+    -webkit-animation:swing 3s infinite ease-in-out;
+    -webkit-transform-origin:bottom;
+}
+
+
+
+/*.beebox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 70vh;
+}*/
+
+.bluebee{
+  height: 25vh;
+  animation: fly 5s infinite;
+  position: absolute;
+  margin-left: 8vw;
+}
+
+.redbee{
+  height: 25vh;
+  animation: fly 5s infinite;
+  position: absolute;
+  margin-left: 24vw;
+}
+
+.orangebee{
+  height: 25vh;
+  animation: fly 5s infinite;
+  position: absolute;
+  margin-left: 40vw;
+}
+
+.purplebee{
+  height: 25vh;
+  animation: fly 5s infinite;
+  position: absolute;
+  margin-left: 60vw;
+}
+
+
+.bigsun{
+  height: 80vh;
+  position: fixed;
+  bottom: 0px;
+  margin-left: 200vw;
+  -webkit-animation:sway 3s infinite ease-in-out;
+  -webkit-transform-origin: bottom;
+}
+.bigbee{
+  margin-left: 60vw;
+  height: 35vh;
+  position: absolute;
+  margin-top: 20vh;
+  -webkit-animation:bughover 6s infinite ease-in-out;
+}
+
+
+#bee{
+
+}
+
+#play{
+  margin-left: 44vw;
+  margin-right: 40vw;
+  height: 5vh;
+  width: 12vw;
+  border-radius: 10px;
+  background-color: #F26522;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
+  position: fixed;
+  bottom: 100px;
+  cursor: pointer;
+}
+
+@keyframes fly {
+    0%{
+      top: 0px;
+    }
+    25%{
+      top: 200px;
+    }
+    50%{
+      top: 300px;
+    }
+    75%{
+      top: 200px;
+    }
+    100%{
+      top: 0px;
+    }
+  }
+
+  @-webkit-keyframes swing{
+      0%{-webkit-transform:rotate(-3deg)}
+      50%{-webkit-transform:rotate(3deg)}
+      100%{-webkit-transform:rotate(-3deg)}
+    }
+    @-webkit-keyframes sway{
+        0%{-webkit-transform:rotate(0deg)}
+        50%{-webkit-transform:rotate(3deg)}
+        100%{-webkit-transform:rotate(0deg)}
+      }
+      @keyframes bughover {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+/*@keyframes bluesway {
+  0%{
+    left: -60px;
+  }
+  25%{
+    left: -50px;
+  }
+  50%{
+    left: -20px;
+  }
+  75%{
+    left: -50px;
+  }
+  100%{
+    left: -60px;
+  }*/
+/*
+  @keyframes purplesway {
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(10deg);
+  }
+  50%{
+    transform: rotate(15deg);
+  }
+  75%{
+    transform: rotate(5deg);
+  }
+  100%{
+    transform: rotate(-10deg);
+  }
+}*/
+
+
+  /*100% { -webkit-transform: rotate(360deg);
+    transform:rotate(360deg); }
+
+}*/
