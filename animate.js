@@ -4,6 +4,7 @@ angular.module("bees").directive("animate", function() {
     link: function(scope, element, attributes){
       $(document).ready(function() {
           $(".bigsun").animate({'right': "1000px"}, 1000);
+
         });
 
 

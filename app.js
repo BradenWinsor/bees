@@ -5,6 +5,10 @@ angular.module("bees",["ui.router"])
       url: "/",
       templateUrl: "home.html"
     })
+    .state('instructions',{
+      url: "/instructions",
+      templateUrl: "instructions.html"
+    })
     .state('play', {
       url: "/play",
       templateUrl: "play.html"
