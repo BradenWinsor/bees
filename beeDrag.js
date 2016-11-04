@@ -8,7 +8,6 @@ angular.module('bees').directive('beeDrag', ['$document', function($document) {
       //  position: 'relative',
       //  border: '1px solid red',
       //  backgroundColor: 'lightgrey',
-
        cursor: 'pointer'
       });
 
@@ -30,7 +29,7 @@ angular.module('bees').directive('beeDrag', ['$document', function($document) {
           left:  x + 'px'
         });
       }
-      
+
       function mouseup() {
         element.css({"animation": "fly 5s infinite"});
         $document.off('mousemove', mousemove);

@@ -1,4 +1,4 @@
-angular.module("bees").directive("scratch", function($state) {
+angular.module("bees").directive("guess", function($state) {
   return{
     restrict: "EA",
     scope: {
@@ -15,7 +15,6 @@ angular.module("bees").directive("scratch", function($state) {
             beeClicked = true;
              beeColor = $(this).attr('id');
              beeSelf = $(this);
-            console.log(color);
           });
           $(document).mouseup(function(){
             beeClicked = false;
