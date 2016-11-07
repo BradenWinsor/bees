@@ -32,8 +32,6 @@ angular.module('bees').directive('beeDrag', ['$document', function($document) {
         $document.off('mousemove', mousemove);
         $document.off('mouseup', mouseup);
       }
-
-
-    } //link bracket
+    }
   };
 }]);

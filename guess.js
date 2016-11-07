@@ -21,11 +21,12 @@ angular.module("bees").directive("guess", function($state) {
           });
                 $(".flower").on("mouseup", function(){
                     flowerColor = $(this).attr('id');
-                    if(beeColor === flowerColor){
+                    if(beeClicked && beeColor === flowerColor){
                     beeSelf.hide();
                       matches++;
                       $("#matches").text(matches);
                   }
+
                   if(matches >= 4){
                     $state.go('victory');
                   }

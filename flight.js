@@ -8,8 +8,8 @@ angular.module("bees").directive('randomflight', function(){
       function makeNewPosition(){
 
           // Get viewport dimensions (remove the dimension of the div)
-          var h = $(window).height() - 250;
-          var w = $(window).width() - 250;
+          var h = $(window).height();
+          var w = $(window).width();
           var nh = Math.floor(Math.random() * h);
           var nw = Math.floor(Math.random() * w);
 
