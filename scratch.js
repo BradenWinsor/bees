@@ -10,7 +10,6 @@ angular.module("bees").directive('randomflight', function(){
           // Get viewport dimensions (remove the dimension of the div)
           var h = $(window).height() - 250;
           var w = $(window).width() - 250;
-
           var nh = Math.floor(Math.random() * h);
           var nw = Math.floor(Math.random() * w);
 

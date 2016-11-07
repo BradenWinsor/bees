@@ -100,28 +100,28 @@ h3{
   height: 25vh;
   animation: fly 5s infinite;
   position: absolute;
-  margin-left: 4vw;
+  /*margin-left: 4vw;*/
 }
 
 .bluebee{
   height: 25vh;
   animation: fly 5s infinite;
   position: absolute;
-  margin-left: 29vw;
+  /*margin-left: 29vw;*/
 }
 
 .orangebee{
   height: 25vh;
   animation: fly 5s infinite;
   position: absolute;
-  margin-left: 57vw;
+  /*margin-left: 57vw;*/
 }
 
 .purplebee{
   height: 25vh;
   animation: fly 5s infinite;
   position: absolute;
-  margin-left: 86vw;
+  /*margin-left: 86vw;*/
 }
 
 
@@ -140,9 +140,9 @@ h3{
   margin-top: 10vh;
   -webkit-animation:bughover 6s infinite ease-in-out;
 }
-.bigbee2{
-
-  height: 35vh;
+#winnerbee{
+  margin-left: 190vh;
+  -webkit-animation:bughover2 4s 1 ease-in-out;
 }
 
 
@@ -190,11 +190,11 @@ h3{
   font-family: 'Indie Flower', cursive;
   font-size: 25px;
   position: fixed;
-  bottom: 500px;
+  bottom: 400px;
   cursor: pointer;
 }
 
-@keyframes fly {
+/*@keyframes fly {
     0%{
       top: 0px;
     }
@@ -210,7 +210,7 @@ h3{
     100%{
       top: 0px;
     }
-  }
+  }*/
 
   @-webkit-keyframes swing{
       0%{-webkit-transform:rotate(-3deg)}
@@ -225,4 +225,8 @@ h3{
       @keyframes bughover {
     from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
     to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+@keyframes bughover2 {
+from { transform: rotate(0deg) translateX(250px) rotate(0deg); }
+to   { transform: rotate(360deg) translateX(250px) rotate(-360deg); }
 }

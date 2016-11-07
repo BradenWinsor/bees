@@ -3,36 +3,45 @@ angular.module("bees").directive('randomflight', function(){
     restrict: 'A',
     link: function(scope, element, attributes){
     $(document).ready(function(){
-      var h = $(window).height() - 250;
-      var w = $(window).width() - 250;
-      var nh = Math.floor(Math.random() * h);
-      var nw = Math.floor(Math.random() * w);
+      animateDiv();
 
-function randomSpot() {
-      $('.flyer').css({
-        position: 'fixed',
-        right: nw,
-        top: nh,
-        animation: 'none'
-      });
-    }
+      function makeNewPosition(){
 
+          // Get viewport dimensions (remove the dimension of the div)
+          var h = $(window).height();
+          var w = $(window).width();
+          var nh = Math.floor(Math.random() * h);
+          var nw = Math.floor(Math.random() * w);
 
+          return [nh,nw];
+
+      }
 
       function animateDiv(){
-        var newq = randomSpot();
-        var oldq = $('.flyer').offset();
-        var speed = calcSpeed([oldq.top, oldq.left], newq);
+          var newq = makeNewPosition();
+          var oldq = $('.flyer').offset();
+          var speed = calcSpeed([oldq.top, oldq.left], newq);
 
-        $('.flyer').animate({ top: newq, left: newq}, speed, function(){
-      animateDiv();
-        });
+          $('.flyer').animate({ top: newq[0], left: newq[1] }, speed, function(){
+            animateDiv();
+          });
 
-}
-    animateDiv();
-    // element.on('mousedown', function(){
-    //   $(this).removeClass('flyer');
-    // });
+      }
+
+      function calcSpeed(prev, next) {
+
+          var x = Math.abs(prev[1] - next[1]);
+          var y = Math.abs(prev[0] - next[0]);
+
+          var greatest = x > y ? x : y;
+
+          var speedModifier = 0.1;
+
+          var speed = Math.ceil(greatest/speedModifier);
+
+          return speed;
+
+      }
 
 
   }); //document ready closing
